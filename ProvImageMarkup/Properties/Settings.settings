@@ -1,0 +1,33 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ProvImageMarkup.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="defDbPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">c:\Users\OBogdan\Documents\Visual Studio 2015\Projects\ProvImageMarkup\</Value>
+    </Setting>
+    <Setting Name="defCur" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Test/10000/книга учета №-3</Value>
+    </Setting>
+    <Setting Name="defReplace" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\\terminalsrv-sav\ORT\OI\2016\12\29\images\КП038Б-1С1\ORIG\Передача_001_КП038Б-1С1\книга учета №-3</Value>
+    </Setting>
+    <Setting Name="defcolname" Type="System.String" Scope="User">
+      <Value Profile="(Default)">FilePath</Value>
+    </Setting>
+    <Setting Name="defColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Khaki</Value>
+    </Setting>
+    <Setting Name="defBorder" Type="System.Decimal" Scope="User">
+      <Value Profile="(Default)">10.0</Value>
+    </Setting>
+    <Setting Name="defTextColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">White</Value>
+    </Setting>
+    <Setting Name="defFont" Type="System.Drawing.Font" Scope="User">
+      <Value Profile="(Default)">Arial Black, 20.25pt, style=Bold</Value>
+    </Setting>
+    <Setting Name="defOtst" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">10</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
