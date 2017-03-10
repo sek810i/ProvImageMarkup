@@ -27,7 +27,7 @@ namespace ProvImageMarkup
                 comboBox1.Items.Add(rec.pid);
             }
             if (Records.Count == 0) { MessageBox.Show(@"База не загруженна из за ошибки",@"Ошибка"); }
-            else { MessageBox.Show(@"База не загруженна из за ошибки",@"Ошибка"); }
+            else { MessageBox.Show(@"База загружена"); }
             
         }
 
@@ -98,8 +98,16 @@ namespace ProvImageMarkup
             RecordsAll = Records;
             foreach (var rec in RecordsAll) {
                 foreach (var per in rec.persons) {
-                    per.FilePath = per.FilePath.Replace(textBox2.Text, textBox3.Text);
-                    per.FilePath = per.FilePath.Replace(@"/", @"\");
+                    if (textBox2.Text == "")
+                    {
+                        per.FilePath = textBox3.Text + per.FilePath;
+                        per.FilePath = per.FilePath.Replace(@"/", @"\");
+                    }
+                    else
+                    {
+                        per.FilePath = per.FilePath.Replace(textBox2.Text, textBox3.Text);
+                        per.FilePath = per.FilePath.Replace(@"/", @"\");
+                    }
                 }
             }
 

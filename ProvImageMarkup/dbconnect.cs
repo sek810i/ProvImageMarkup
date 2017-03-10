@@ -20,7 +20,7 @@ namespace ProvImageMarkup
             var records = new List<Record>();
             try
             { 
-                records = conAccess.Query<Record>(@"select id as pid, f1, " + colName + " as FilePath from main where entity like 'Страница%' order by id").ToList();
+                records = conAccess.Query<Record>(@"select top 1000 id as pid, f1, " + colName + " as FilePath from main where entity like 'Страница%' order by id").ToList();
             }
             catch (OleDbException ex)
             {
