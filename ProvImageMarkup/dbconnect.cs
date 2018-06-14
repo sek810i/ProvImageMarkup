@@ -20,7 +20,7 @@ namespace ProvImageMarkup
             var records = new List<Record>();
             try
             { 
-                records = conAccess.Query<Record>(@"select top 1000 id as pid, f1, " + colName + " as FilePath from main where entity like 'Страница%' order by id").ToList();
+                records = conAccess.Query<Record>(@"select id as pid, f1, " + colName + " as FilePath from main where entity like 'Страница%'  order by id").ToList();
             }
             catch (OleDbException ex)
             {
@@ -44,13 +44,12 @@ namespace ProvImageMarkup
             var fio = new List<Fio>();
             try
             {
-                fio = conAccess.Query<Fio>(@"select id, f2 as Fam,f3 as Name,f4 as Otch from main where entity like 'Человек %' order by id").ToList();
+                fio = conAccess.Query<Fio>(@"select id, f2 as Fam,f3 as Name,f4 as Otch from main where entity like 'Человек%' order by id").ToList();
             }
             catch (OleDbException ex)
             {
                 MessageBox.Show(ex.Message, @"Ошибка");
             }
-
             return fio;
         }
     }

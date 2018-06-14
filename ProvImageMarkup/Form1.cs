@@ -21,8 +21,8 @@ namespace ProvImageMarkup
             var dbcon = new Dbconnect {DbPath = openFileDialog1.FileName};
             Records = dbcon.ReadDb(textBox4.Text);
             Records = Record.fullPersons(Records, checkBox1.Checked);
-            //var fio = dbcon.ReadFio();
-            //Records = Record.addFIO(fio, Records);
+            var fio = dbcon.ReadFio();
+            Records = Record.addFIO(fio, Records);
             foreach (var rec in Records) {
                 comboBox1.Items.Add(rec.pid);
             }
@@ -131,6 +131,12 @@ namespace ProvImageMarkup
         {
             var prop = new PropMarkup();
             prop.Show();
+        }
+
+        private void comboBox1_TextChanged(object sender, EventArgs e)
+        {
+            int index = comboBox1.FindString(comboBox1.Text);
+            comboBox1.SelectedIndex = index;
         }
     }
 }

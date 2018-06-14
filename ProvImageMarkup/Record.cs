@@ -23,15 +23,17 @@ namespace ProvImageMarkup
                 if (records.persons.Count != 0) {
                     foreach (var pers in records.persons)
                     {
-                        foreach (var f in FIOList)
+                        if (pers.id != 0)
                         {
-                            if (pers.id == f.id)
+                            var fio = FIOList.First(f => f.id == pers.id);
+                            if (fio.id != 0)
                             {
-                                pers.Fam = f.Fam;
-                                pers.Name = f.Name;
-                                pers.Otch = f.Otch;
+                                pers.Fam = fio.Fam;
+                                pers.Name = fio.Name;
+                                pers.Otch = fio.Otch;
                             }
                         }
+                        
                     }
                 }
             }
